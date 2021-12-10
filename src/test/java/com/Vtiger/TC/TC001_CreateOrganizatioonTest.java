@@ -2,6 +2,7 @@ package com.Vtiger.TC;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.Vtiger.POMClasses.CreateOrgPage;
@@ -10,12 +11,10 @@ import com.Vtiger.POMClasses.OrgInfoPage;
 import com.Vtiger.genericUtil.BaseClass;
 import com.Vtiger.genericUtil.JavaUtil;
 
-import junit.framework.Assert;
-
-public class TC001_CreateOrganizationTest extends BaseClass
+public class TC001_CreateOrganizatioonTest extends BaseClass
 {
 
-	@Test(groups="smokeTest")
+	@Test(groups="smokeTest" , retryAnalyzer = com.Vtiger.genericUtil.RetryAnalyzer.class)
 	public void createOrg() {
 		//Click on org and create org
 		HomePage hp = new HomePage(driver);
@@ -25,8 +24,6 @@ public class TC001_CreateOrganizationTest extends BaseClass
 		orginfopage.getCreateorgimg().click();
 
 		String Orgname=JavaUtil.objforJavaUtil().getFirstName()+JavaUtil.objforJavaUtil().generateRandomNumber();
-
-
 
 		CreateOrgPage cop = new CreateOrgPage(driver);
 		cop.getcreateorgnametxtfld().sendKeys(Orgname);
@@ -44,13 +41,14 @@ public class TC001_CreateOrganizationTest extends BaseClass
 
 		WebElement orgname=null;
 
-		orgname	=driver.findElement(By.xpath("//a[text()='"+Orgname+"' and @title='Organizations']"));
+		orgname	=driver.findElement(By.xpath("//a[text()='"+Orgname+"' and @title='Organizatio']"));
 		System.out.println(orgname.isDisplayed());
 		String actual=orgname.getText();
 		Assert.assertEquals(Orgname, actual);
 
 	}
-	@Test(groups="RegressionTest")
+
+	@Test(groups="RegressionTest" , retryAnalyzer = com.Vtiger.genericUtil.RetryAnalyzer.class)
 	public void createorgwithphonenumber() 
 	{
 		HomePage hp = new HomePage(driver);

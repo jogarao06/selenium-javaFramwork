@@ -1,7 +1,11 @@
 package com.Vtiger.genericUtil;
 
+import java.io.File;
 import java.io.IOException;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -13,7 +17,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
-
 import com.Vtiger.POMClasses.HomePage;
 import com.Vtiger.POMClasses.LoginPage;
 
@@ -22,6 +25,8 @@ public class BaseClass
 	public  WebDriver driver;
 	public LoginPage lp;
 	public WebDriverUtil webutil;
+	public static WebDriver sdriver;
+
 
 	@BeforeSuite(groups = {"smokeTest"})
 	public void setUp() 
@@ -29,24 +34,28 @@ public class BaseClass
 		System.out.println("Connect to DB");
 
 	}
-	@Parameters("BROWSER")
+	//@Parameters("BROWSER")
 	@BeforeClass(groups = {"smokeTest"})
-	public void launchBrowser_URL(String browser) throws IOException {
-	//String browser=FileUtil.objforfileutil().readDatafromPropfile("browser");
+	public void launchBrowser_URL() throws IOException {
+		String browser=FileUtil.objforfileutil().readDatafromPropfile("browser");
 		//Launch browser
 		if(browser.equalsIgnoreCase("Chrome"))
 		{
 			driver = new ChromeDriver();
+			
 		}
 		else if(browser.equalsIgnoreCase("firefox")) {
 			driver=new FirefoxDriver();
+			
 		}
 		else if (browser.equalsIgnoreCase("safari")) {
 			driver= new SafariDriver();
+			
 		}
 		else
 		{
 			driver=	new ChromeDriver();
+			
 		}
 		//get url
 		driver.get(FileUtil.objforfileutil().readDatafromPropfile("url"));
@@ -55,6 +64,7 @@ public class BaseClass
 		webutil.maximisewindow();
 		webutil.pageloadtimeout();
 		lp = new LoginPage(driver);
+		sdriver=driver;
 	}
 
 	@BeforeMethod(groups = {"smokeTest"})
@@ -71,11 +81,11 @@ public class BaseClass
 	{
 		HomePage hp = new HomePage(driver);
 		hp.logOutfromApp();
-
 	}
 
-	@AfterClass(groups ={"smokeTest"})
-	public void tearDown() throws InterruptedException {
+	@AfterClass(groups ={"smokeTest","RegressionTest"})
+	public void tearDown() throws InterruptedException 
+	{
 
 		Thread.sleep(1000);
 		driver.close();
@@ -84,5 +94,14 @@ public class BaseClass
 	public void disconnectfromDB() {
 		System.out.println("Disconnect");
 	}
+	
+	public static void takeScreenshot(String name) throws IOException 
+	{
+		File srcfile =((TakesScreenshot) sdriver).getScreenshotAs(OutputType.FILE);
+		String destfile= System.getProperty("user.dir")+"/Screenshots/"+name+".png";
+		File finaldest = new File(destfile) ;
+		FileUtils.copyFile(srcfile,finaldest);
+	}
+
 
 }

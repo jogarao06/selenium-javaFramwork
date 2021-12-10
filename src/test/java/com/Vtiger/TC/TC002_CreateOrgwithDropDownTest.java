@@ -13,7 +13,7 @@ import com.Vtiger.POMClasses.OrgInfoPage;
 import com.Vtiger.genericUtil.BaseClass;
 import com.Vtiger.genericUtil.JavaUtil;
 
-public class TC002_CreateOrgwithDropDown extends BaseClass  {
+public class TC002_CreateOrgwithDropDownTest extends BaseClass  {
 
 	@Test(groups="RegressionTest")
 	public void CreateorgwithDD() throws InterruptedException, EncryptedDocumentException, IOException {

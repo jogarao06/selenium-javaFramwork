@@ -1,6 +1,7 @@
 package com.Vtiger.TC;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.Vtiger.POMClasses.ContactInfoPage;
@@ -10,9 +11,9 @@ import com.Vtiger.POMClasses.HomePage;
 import com.Vtiger.genericUtil.BaseClass;
 import com.Vtiger.genericUtil.JavaUtil;
 
-import junit.framework.Assert;
 
-public class TC003_CreateContactWithOrg extends BaseClass {
+
+public class TC003_CreateContactWithOrgTest extends BaseClass {
 
 	
 	@Test(groups="RegressionTest")

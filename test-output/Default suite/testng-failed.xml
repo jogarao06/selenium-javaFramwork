@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.sdet2.practice.Read_Excel">
+      <class name="com.sdet2.practice.SampleTest">
         <methods>
-          <include name="readData"/>
+          <include name="cmdlineparameter"/>
         </methods>
-      </class> <!-- com.sdet2.practice.Read_Excel -->
+      </class> <!-- com.sdet2.practice.SampleTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

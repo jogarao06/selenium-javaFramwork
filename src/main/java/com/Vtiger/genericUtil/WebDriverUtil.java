@@ -1,9 +1,14 @@
 package com.Vtiger.genericUtil;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.Set;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -98,7 +103,8 @@ public class WebDriverUtil
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy("+x+","+y+")");
 	}
-
+	
+	
 	public void switchTowindow(String title) 
 	{
 		Set<String> winids = driver.getWindowHandles();
