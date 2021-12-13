@@ -17,7 +17,6 @@ public class TC002_CreateOrgwithDropDownTest extends BaseClass  {
 
 	@Test(groups="RegressionTest")
 	public void CreateorgwithDD() throws InterruptedException, EncryptedDocumentException, IOException {
-
 		//Navigate to organizations
 
 		HomePage hp = new HomePage(driver);
