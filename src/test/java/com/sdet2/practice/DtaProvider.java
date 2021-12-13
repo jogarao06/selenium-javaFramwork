@@ -37,4 +37,9 @@ public class DtaProvider {
 		}
 		return arr;
 	}
+	
+	public void s1() {
+		System.out.println("this is s1");
+		
+	}
 }

@@ -23,7 +23,7 @@ public class Demo1
 	public void facebook() {
 		WebDriverManager.chromedriver().setup();
 		driver= new ChromeDriver();
-		driver.get("https://facebook.com");
+		driver.get("https://flipkart.com");
 		String currenturl=driver.getCurrentUrl();
 		System.out.println(currenturl);
 		Assert.assertEquals("https://facebook.com",currenturl );
@@ -33,7 +33,7 @@ public class Demo1
 	public void amazon() {
 		WebDriverManager.chromedriver().setup();
 		driver= new ChromeDriver();
-		driver.get("https://amazon.in");
+		driver.get("https://myntra.com");
 		String currenturl=driver.getCurrentUrl();
 		System.out.println(currenturl);
 		Assert.assertEquals("https://facebook.com",currenturl );

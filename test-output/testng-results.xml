@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16576" started-at="2021-12-10T11:38:13 IST" finished-at="2021-12-10T11:38:30 IST">
+  <suite name="Default suite" duration-ms="147" started-at="2021-12-13T11:24:01 IST" finished-at="2021-12-13T11:24:01 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16576" started-at="2021-12-10T11:38:13 IST" finished-at="2021-12-10T11:38:30 IST">
-      <class name="com.sdet2.practice.SampleTest">
-        <test-method status="PASS" signature="cmdlineparameter()[pri:0, instance:com.sdet2.practice.SampleTest@4de5031f]" name="cmdlineparameter" duration-ms="16444" started-at="2021-12-10T11:38:14 IST" finished-at="2021-12-10T11:38:30 IST">
+    <test name="Default test" duration-ms="147" started-at="2021-12-13T11:24:01 IST" finished-at="2021-12-13T11:24:01 IST">
+      <class name="com.sdet2.practice.Sample">
+        <test-method status="PASS" signature="test2()[pri:-3, instance:com.sdet2.practice.Sample@709ba3fb]" name="test2" duration-ms="27" started-at="2021-12-13T11:24:01 IST" finished-at="2021-12-13T11:24:01 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cmdlineparameter -->
-      </class> <!-- com.sdet2.practice.SampleTest -->
+        </test-method> <!-- test2 -->
+        <test-method status="PASS" signature="test1()[pri:0, instance:com.sdet2.practice.Sample@709ba3fb]" name="test1" duration-ms="3" started-at="2021-12-13T11:24:01 IST" finished-at="2021-12-13T11:24:01 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="test3()[pri:0, instance:com.sdet2.practice.Sample@709ba3fb]" name="test3" duration-ms="3" started-at="2021-12-13T11:24:01 IST" finished-at="2021-12-13T11:24:01 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test3 -->
+      </class> <!-- com.sdet2.practice.Sample -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
