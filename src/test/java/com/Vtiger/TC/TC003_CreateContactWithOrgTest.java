@@ -39,6 +39,7 @@ public class TC003_CreateContactWithOrgTest extends BaseClass {
 		ccp.getSaveBtn().click();
 
 		//Validating
+		driver.navigate().refresh();
 		Thread.sleep(3000);
 		hp.getContactslink().click();
 		cip.getSearchcontacttxtfld().sendKeys("SDET3");
@@ -63,7 +64,9 @@ public class TC003_CreateContactWithOrgTest extends BaseClass {
 		CreateContactPage ccp = new CreateContactPage(driver);
 		String name=JavaUtil.objforJavaUtil().getFirstName();
 		ccp.getLastNameEdt().sendKeys(name);
+		
 		ccp.getSaveBtn().click();
+		driver.navigate().refresh();
 		Thread.sleep(3000);
 		hp.getContactslink().click();
 		Thread.sleep(2000);

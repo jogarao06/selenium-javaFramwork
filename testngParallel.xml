@@ -7,12 +7,12 @@
 	</listeners>
 	<test name="TestRunner1">
 		<classes>
-			<class name="com.Vtiger.TC.TC003_CreateContactWithOrg" />
+			<class name="com.Vtiger.TC.TC003_CreateContactWithOrgTest" />
 		</classes>
 	</test> <!-- Test -->
 	<test name="TestRunner2">
 		<classes>
-			<class name="com.Vtiger.TC.TC002_CreateOrgwithDropDown" />
+			<class name="com.Vtiger.TC.TC002_CreateOrgwithDropDownTest" />
 		</classes>
 	</test> <!-- Test -->
 	<test name="TestRunner3">

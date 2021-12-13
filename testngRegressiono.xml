@@ -8,8 +8,8 @@
 	</groups>
 	<test thread-count="5" name="Test">
 		<classes>
-			<class name="com.Vtiger.TC.TC003_CreateContactWithOrg" />
-			<class name="com.Vtiger.TC.TC002_CreateOrgwithDropDown" />
+			<class name="com.Vtiger.TC.TC003_CreateContactWithOrgTest" />
+			<class name="com.Vtiger.TC.TC002_CreateOrgwithDropDownTest" />
 			<class name="com.Vtiger.TC.TC001_CreateOrganizationTest" />
 		</classes>
 	</test> <!-- Test -->

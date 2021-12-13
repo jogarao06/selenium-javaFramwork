@@ -11,7 +11,7 @@ import com.Vtiger.POMClasses.OrgInfoPage;
 import com.Vtiger.genericUtil.BaseClass;
 import com.Vtiger.genericUtil.JavaUtil;
 
-public class TC001_CreateOrganizatioonTest extends BaseClass
+public class TC001_CreateOrganizationTest extends BaseClass
 {
 
 	@Test(groups="smokeTest" , retryAnalyzer = com.Vtiger.genericUtil.RetryAnalyzer.class)

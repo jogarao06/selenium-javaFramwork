@@ -14,7 +14,7 @@ public class HomePage // Rule 1
 	@FindBy(xpath="//a[text()='Sign Out']")
 	private WebElement signoutlink;
 
-	@FindBy(xpath="//a[text()='Organizatios']")//Rule 2
+	@FindBy(xpath="//a[text()='Organizations']")//Rule 2
 	private WebElement orglink; //Rule 3
 
 	@FindBy(xpath="//a[text()='Contacts']")
@@ -43,6 +43,7 @@ public class HomePage // Rule 1
 	{
 		driver.navigate().refresh();
 		WebDriverUtil webutil = new WebDriverUtil(driver);
+		Thread.sleep(1000);
 		webutil.movetoelement(logoutimg);
 		Thread.sleep(3000);
 		signoutlink.click();

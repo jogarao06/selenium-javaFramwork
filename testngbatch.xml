@@ -5,8 +5,8 @@
 	<parameter name="BROWSER" value="firefox"></parameter>
 		<classes>
 			<class name="com.Vtiger.TC.TC001_CreateOrganizationTest" />
-			<class name="com.Vtiger.TC.TC002_CreateOrgwithDropDown" />
-			<class name="com.Vtiger.TC.TC003_CreateContactWithOrg" />
+			<class name="com.Vtiger.TC.TC002_CreateOrgwithDropDownTest" />
+			<class name="com.Vtiger.TC.TC003_CreateContactWithOrgTest" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
