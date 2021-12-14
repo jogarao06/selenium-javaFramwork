@@ -10,11 +10,6 @@ public class Contacts {
 
 		System.out.println(" hi all");
 		
-		try {
-			System.out.println(" hi all");
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
 
 		try {
 			System.out.println("Changes from Pavan");
