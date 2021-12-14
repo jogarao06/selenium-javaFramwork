@@ -47,5 +47,15 @@ public class Demo1
 		FileUtils.copyFile(srcfile,finaldest);
 	}
 
+	@Test
+	public void array() {
+
+		int arr[] = new int[5];
+
+		for (int i = 0; i < 5; i++) 
+		{
+			
+		}		
+	}
 
 }
