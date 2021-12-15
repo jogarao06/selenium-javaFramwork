@@ -4,18 +4,19 @@ public class Contacts {
 
 	public static void main(String[] args) {
 		System.out.println("push to contacts branch");
-		
+
 
 		System.out.println("Changes from Pavan");
 
 		System.out.println(" hi all");
 		
+
 		try {
-			System.out.println(" hi all");
+			System.out.println("Changes from Pavan");
+
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
-
 	}
 
 }
