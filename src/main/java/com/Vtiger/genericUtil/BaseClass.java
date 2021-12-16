@@ -37,25 +37,27 @@ public class BaseClass
 	//@Parameters("BROWSER")
 	@BeforeClass(groups = {"smokeTest","RegressionTest"})
 	public void launchBrowser_URL() throws IOException {
-		String browser=FileUtil.objforfileutil().readDatafromPropfile("browser");
+		//String browser=FileUtil.objforfileutil().readDatafromPropfile("browser");
 		//Launch browser
+		String browser=System.getProperty("BROWSER");
+		System.out.println(browser);
 		if(browser.equalsIgnoreCase("Chrome"))
 		{
 			driver = new ChromeDriver();
-			
+
 		}
 		else if(browser.equalsIgnoreCase("firefox")) {
 			driver=new FirefoxDriver();
-			
+
 		}
 		else if (browser.equalsIgnoreCase("safari")) {
 			driver= new SafariDriver();
-			
+
 		}
 		else
 		{
 			driver=	new ChromeDriver();
-			
+
 		}
 		//get url
 		driver.get(FileUtil.objforfileutil().readDatafromPropfile("url"));
@@ -94,7 +96,7 @@ public class BaseClass
 	public void disconnectfromDB() {
 		System.out.println("Disconnect");
 	}
-	
+
 	public static void takeScreenshot(String name) throws IOException 
 	{
 		File srcfile =((TakesScreenshot) sdriver).getScreenshotAs(OutputType.FILE);
