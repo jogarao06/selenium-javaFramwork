@@ -103,8 +103,8 @@ public class WebDriverUtil
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy("+x+","+y+")");
 	}
-	
-	
+
+
 	public void switchTowindow(String title) 
 	{
 		Set<String> winids = driver.getWindowHandles();
@@ -117,6 +117,19 @@ public class WebDriverUtil
 			}
 
 		}
+	}
+
+	public void clickonElement(WebElement element)
+	{
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("arguments[0].click();", element);
+
+	}
+
+	public void sendKeysJS(WebElement element, String text) 
+	{
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("document.getElementById('"+element+"').setAttribute('value', '"+text+"')");
 	}
 
 }

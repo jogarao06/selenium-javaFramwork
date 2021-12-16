@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="147" started-at="2021-12-13T11:24:01 IST" finished-at="2021-12-13T11:24:01 IST">
+  <suite name="Default suite" duration-ms="205" started-at="2021-12-16T16:01:56 IST" finished-at="2021-12-16T16:01:56 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="147" started-at="2021-12-13T11:24:01 IST" finished-at="2021-12-13T11:24:01 IST">
-      <class name="com.sdet2.practice.Sample">
-        <test-method status="PASS" signature="test2()[pri:-3, instance:com.sdet2.practice.Sample@709ba3fb]" name="test2" duration-ms="27" started-at="2021-12-13T11:24:01 IST" finished-at="2021-12-13T11:24:01 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test2 -->
-        <test-method status="PASS" signature="test1()[pri:0, instance:com.sdet2.practice.Sample@709ba3fb]" name="test1" duration-ms="3" started-at="2021-12-13T11:24:01 IST" finished-at="2021-12-13T11:24:01 IST">
+    <test name="Default test" duration-ms="205" started-at="2021-12-16T16:01:56 IST" finished-at="2021-12-16T16:01:56 IST">
+      <class name="com.sdet2.practice.SampleTest">
+        <test-method status="PASS" signature="test1()[pri:0, instance:com.sdet2.practice.SampleTest@29ba4338]" name="test1" duration-ms="56" started-at="2021-12-16T16:01:56 IST" finished-at="2021-12-16T16:01:56 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="test3()[pri:0, instance:com.sdet2.practice.Sample@709ba3fb]" name="test3" duration-ms="3" started-at="2021-12-13T11:24:01 IST" finished-at="2021-12-13T11:24:01 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test3 -->
-      </class> <!-- com.sdet2.practice.Sample -->
+      </class> <!-- com.sdet2.practice.SampleTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
