@@ -28,14 +28,14 @@ public class BaseClass
 	public static WebDriver sdriver;
 
 
-	@BeforeSuite(groups = {"smokeTest"})
+	@BeforeSuite(groups = {"smokeTest","RegressionTest"})
 	public void setUp() 
 	{
 		System.out.println("Connect to DB");
 
 	}
 	//@Parameters("BROWSER")
-	@BeforeClass(groups = {"smokeTest"})
+	@BeforeClass(groups = {"smokeTest","RegressionTest"})
 	public void launchBrowser_URL() throws IOException {
 		String browser=FileUtil.objforfileutil().readDatafromPropfile("browser");
 		//Launch browser
@@ -67,7 +67,7 @@ public class BaseClass
 		sdriver=driver;
 	}
 
-	@BeforeMethod(groups = {"smokeTest"})
+	@BeforeMethod(groups = {"smokeTest","RegressionTest"})
 	public void logintoApp() throws IOException 
 	{
 		//Login to app
@@ -76,7 +76,7 @@ public class BaseClass
 
 	}
 
-	@AfterMethod(groups = {"smokeTest"})
+	@AfterMethod(groups = {"smokeTest","RegressionTest"})
 	public void logoutfromApp() throws InterruptedException 
 	{
 		HomePage hp = new HomePage(driver);
@@ -90,7 +90,7 @@ public class BaseClass
 		Thread.sleep(1000);
 		driver.close();
 	}
-	@AfterSuite(groups = {"smokeTest"})
+	@AfterSuite(groups = {"smokeTest","RegressionTest"})
 	public void disconnectfromDB() {
 		System.out.println("Disconnect");
 	}
