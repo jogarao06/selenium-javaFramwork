@@ -41,7 +41,7 @@ public class TC001_CreateOrganizationTest extends BaseClass
 
 		WebElement orgname=null;
 
-		orgname	=driver.findElement(By.xpath("//a[text()='"+Orgname+"' and @title='Organizatio']"));
+		orgname	=driver.findElement(By.xpath("//a[text()='"+Orgname+"' and @title='Organizations']"));
 		System.out.println(orgname.isDisplayed());
 		String actual=orgname.getText();
 		Assert.assertEquals(Orgname, actual);
