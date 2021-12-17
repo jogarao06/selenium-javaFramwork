@@ -39,8 +39,11 @@ public class BaseClass
 	public void launchBrowser_URL() throws IOException {
 		//String browser=FileUtil.objforfileutil().readDatafromPropfile("browser");
 		//Launch browser
+		
 		String browser=System.getProperty("BROWSER");
+	
 		System.out.println(browser);
+		
 		if(browser.equalsIgnoreCase("Chrome"))
 		{
 			driver = new ChromeDriver();
