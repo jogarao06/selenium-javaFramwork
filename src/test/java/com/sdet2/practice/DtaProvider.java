@@ -18,28 +18,26 @@ public class DtaProvider {
 
 	}
 
-
 	@DataProvider
 	public Object[][] getVAlue() throws EncryptedDocumentException, FileNotFoundException, IOException 
 	{
 
 		ExcelUtility eu= new ExcelUtility();
+		
+		int lastrow=eu.getLastRow("Sheet3");
 
-		Object[][] arr =  new Object[2][2];
+		Object[][] arr =  new Object[lastrow+1][3];
 
-		for (int i = 0; i <= 2; i++) 
+		for (int i = 0; i <= lastrow; i++) 
 		{
 
-			arr[i][0] = eu.readDataExcel("Sheet2", i, 0);
-			arr[i][1]= eu.readDataExcel("Sheet2", i, 1);
-			arr[i][2]=eu.readDataExcel("Sheet2", i, 2);
+			arr[i][0] = eu.readDataExcel("Sheet3", i, 0);
+			arr[i][1]= eu.readDataExcel("Sheet3", i, 1);
+			arr[i][2]=eu.readDataExcel("Sheet3", i, 2);
 
 		}
 		return arr;
 	}
 	
-	public void s1() {
-		System.out.println("this is s1");
-		
-	}
+	
 }
