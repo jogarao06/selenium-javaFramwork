@@ -37,10 +37,10 @@ public class BaseClass
 	//@Parameters("BROWSER")
 	@BeforeClass(groups = {"smokeTest","RegressionTest"})
 	public void launchBrowser_URL() throws IOException {
-		//String browser=FileUtil.objforfileutil().readDatafromPropfile("browser");
+		String browser=FileUtil.objforfileutil().readDatafromPropfile("browser");
 		//Launch browser
 		
-		String browser=System.getProperty("BROWSER");
+		//String browser=System.getProperty("BROWSER");
 	
 		System.out.println(browser);
 		
