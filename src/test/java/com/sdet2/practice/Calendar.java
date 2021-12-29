@@ -21,52 +21,52 @@ public class Calendar {
 
 		System.out.println(src+"   "+dest);
 
-//		Date d1 = new Date();
-//		String todaysDate=d1.toString();
-//
-//		String[] arr =todaysDate.split(" ");
-//
-//		// Tue Dec 21 11:39:43 IST 2021
-//		//  0   1   2     3     4   5
-//		// Tue Dec 21 2021
-//
-//		String day=arr[0];
-//		String month = arr[1];
-//		String date=arr[2];
-//		String year = arr[5];
-//
-//		String currentdate=day+" "+month+" "+date+" "+year;
-//
-//		System.out.println(currentdate);
-//
-//
-//		WebDriver driver = new ChromeDriver();
-//		driver.get("https://www.makemytrip.com/");
-//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//		driver.manage().window().maximize();
-//
-//
-//		Thread.sleep(2000);
-//		driver.findElement(By.xpath("//span[@class='langCardClose']")).click();
-//
-//		driver.findElement(By.xpath("//li[@data-cy='account']")).click();
-//
-//		//Actions action = new Actions(driver);
-//		//action.moveByOffset(10, 10).build().
-//
-//		driver.findElement(By.id("fromCity")).sendKeys(src);
-//
-//		driver.findElement(By.xpath("//div[.='"+src+"']")).click();
-//
-//		driver.findElement(By.id("toCity")).sendKeys(dest);
-//
-//		driver.findElement(By.xpath("//div[.='"+dest+"']")).click();
-//		Thread.sleep(2000);
-//
-//		driver.findElement(By.xpath("//span[.='DEPARTURE']")).click();
-//
-//		Thread.sleep(2000);
-//		driver.findElement(By.xpath("//div[@aria-label='"+currentdate+"']")).click();
+		Date d1 = new Date();
+		String todaysDate=d1.toString();
+
+		String[] arr =todaysDate.split(" ");
+
+		// Tue Dec 21 11:39:43 IST 2021
+		//  0   1   2     3     4   5
+		// Tue Dec 21 2021
+
+		String day=arr[0];
+		String month = arr[1];
+		String date=arr[2];
+		String year = arr[5];
+
+		String currentdate=day+" "+month+" "+date+" "+year;
+
+		System.out.println(currentdate);
+
+
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.makemytrip.com/");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().window().maximize();
+
+
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//span[@class='langCardClose']")).click();
+
+		driver.findElement(By.xpath("//li[@data-cy='account']")).click();
+
+		//Actions action = new Actions(driver);
+		//action.moveByOffset(10, 10).build().
+
+		driver.findElement(By.id("fromCity")).sendKeys(src);
+
+		driver.findElement(By.xpath("//div[.='"+src+"']")).click();
+
+		driver.findElement(By.id("toCity")).sendKeys(dest);
+
+		driver.findElement(By.xpath("//div[.='"+dest+"']")).click();
+		Thread.sleep(2000);
+
+		driver.findElement(By.xpath("//span[.='DEPARTURE']")).click();
+
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//div[@aria-label='"+currentdate+"']")).click();
 
 	}
 

@@ -7,6 +7,15 @@
 	<artifactId>SDET_2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<dependencies>
+		
+		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>4.0.1</version>
+		</dependency>
+
+
 		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>

@@ -3,18 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Vtiger.TC.TC001_CreateOrganizationTest">
+      <class name="com.sdet2.practice.Extent12">
         <methods>
-          <include name="logoutfromApp"/>
-          <include name="logintoApp"/>
-          <include name="launchBrowser_URL"/>
-          <include name="tearDown"/>
-          <include name="createorgwithphonenumber"/>
-          <include name="setUp"/>
-          <include name="disconnectfromDB"/>
-          <include name="createOrg"/>
+          <include name="getTitlefrommvn"/>
+          <include name="skipit"/>
         </methods>
-      </class> <!-- com.Vtiger.TC.TC001_CreateOrganizationTest -->
+      </class> <!-- com.sdet2.practice.Extent12 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
